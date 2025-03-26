@@ -1,0 +1,15 @@
+# GET all produtos
+curl -X GET http://localhost:3000/produtos
+
+# POST novo produto
+curl -X POST http://localhost:3000/produtos \
+-H "Content-Type: application/json" \
+-d '{"nome":"Nova Caneta","fornecedor":"XYZ Ltda","endereco_fornecedor":"Rua Nova, 321","quantidade":20,"endereco":"Estoque D","preco_unitario":3.5}'
+
+# PUT update produto
+curl -X PUT http://localhost:3000/produtos/1 \
+-H "Content-Type: application/json" \
+-d '{"quantidade":150}'
+
+# DELETE produto
+curl -X DELETE http://localhost:3000/produtos/2
